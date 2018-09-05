@@ -4,24 +4,40 @@
   "version": "0.5",
   "description": "Helper for downloading ts video streams.",
   "homepage_url": "https://github.com/m000/tsdownloader",
-
+  "applications": {
+    "gecko": {
+      "id": "tsdownloader@m000.github.io",
+      "strict_min_version": "54.0a1"
+    }
+  },
   "permissions": [
     "webRequest",
     "downloads",
+    "storage",
+    "tabs",
     "<all_urls>"
   ],
-  "browser_action": {
+  "sidebar_action": {
+    "browser_style": true,
+    "default_panel": "sidebar/tsdownloader.html",
     "default_icon": {
-      "16": "icons/sdownloader_16.png",
-      "32": "icons/sdownloader_32.png"
+      "16": "icons/tsdownloader_16.png",
+      "32": "icons/tsdownloader_32.png"
     }
   },
   "background": {
     "scripts": ["tsdownloader.js"]
   },
-  "applications": {
-    "gecko": {
-      "id": "tsdownloader@m000.github.io"
+  "icons": {
+    "16": "icons/tsdownloader_16.png",
+    "32": "icons/tsdownloader_32.png",
+    "48": "icons/tsdownloader_48.png"
+  },
+  "commands": {
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Ctrl+PageDown"
+      }
     }
   }
 }

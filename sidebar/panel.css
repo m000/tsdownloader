@@ -1,0 +1,121 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 90%;
+  font: caption;
+  font-size: 14px;
+  background-color: #F4F7F8;
+  padding: 20px 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  width: 90%;
+  margin: 6px auto;
+}
+
+body div, body p {
+  width: 90%;
+  margin:  8px auto;
+  padding: 4px 6px;
+}
+
+button {
+  width: 75%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.flexbox {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#monitorbox {
+  margin: 10px auto;
+}
+
+#urls {
+  height: 50%;
+  border: 6px solid #DDE4E9;
+  padding: 4px 2px;
+  transition: background-color .2s ease-out;
+
+  font-family: monospace;
+  white-space: pre;
+  overflow: auto;
+}
+
+#content[contenteditable=true] {
+  background-color: white;
+  transition: background-color .2s ease-in;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}
+
+
+/* switch style - based on https://www.w3schools.com/howto/howto_css_switch.asp */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  text-align: left;
+}
+.switch input { display:none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.switch-label {
+  height: 34px;
+  line-height: 34px;
+  font-weight: bold;
+  padding: 0px 4px;
+}
