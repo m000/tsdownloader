@@ -7,7 +7,7 @@
   </head>
 
 <body>
-  <h2>Toggle Monitoring</h2>
+  <h2>Toggle monitoring</h2>
   <div id="monitorbox" class="flexbox">
     <label for="monitor" class="switch-label">Monitor</label>
     <label class="switch"><input id="monitor" type="checkbox"><span class="slider round"></span></label>
@@ -18,9 +18,20 @@
   <div id="urls"></div>
 
   <h2>Download pattern</h2>
-  <p>dffd</p>
+  <div id="patternbox">
+    <label for="pattern-url">URL</label><input id="pattern-url" size="30">
+    <br/>
+    <label for="pattern-start">Start</label><input id="pattern-start" type="number" size="5" min="0" max="10000" value="1">
+    <label for="pattern-end">End</label><input id="pattern-end" type="number" size="5" min="0" max="10000" value="1000">
+    <label for="pattern-padding">Pad</label><input id="pattern-padding" type="number" size="1" min="0" max="6" value="0">
+    <br/>
+    <label for="pattern-filename">Filename</label><input id="pattern-filename" size="30">
+  </div>
+
+  <p>Use the Generate button to produce a download pattern from the collected URLs. Or enter a URL pattern manually. Press Download button to download the fragments.</p>
   <div class="flexbox">
     <button type="button">Generate</button>
+    <button type="button">Download</button>
   </div>
 
 
